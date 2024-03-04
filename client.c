@@ -71,9 +71,10 @@ int main(int argc, char** argv) {
 
             buffer[bytes_received] = '\0'; // Null-terminate the received data
 
-            printf("Received from server: %s\n", buffer);
+            printf("%s\n", buffer);
         }
 
+        printf("Send Message\n> ");
         if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
             perror("fgets");
             continue;
